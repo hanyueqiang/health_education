@@ -40,7 +40,7 @@ class Index extends PureComponent {
             {/* <img alt="logo" src={logo} /> */}
           </Col>
         </Row>
-        <h2 className={styles.title}>业务模板</h2>
+        <h2 className={styles.title}>智能健康宣教机器人</h2>
         <Login onSubmit={this.handleSubmit} loading={loading} isError={isError} />
       </div>
     );

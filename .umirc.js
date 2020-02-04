@@ -4,6 +4,10 @@ import { resolve } from "path";
 export default {
   treeShaking: true,
   hash: true, // 生成hash文件名
+  targets: { ie: 11 },
+  theme: {
+    "primary-color": "#1ECBB0",
+  },
   // routes: [
   //   {
   //     path: '/',
@@ -19,7 +23,7 @@ export default {
       antd: true,
       dva: true,
       dynamicImport: { webpackChunkName: true },
-      title: 'app-template',
+      title: '健康宣教',
       dll: true,
       routes: {
         exclude: [
