@@ -7,13 +7,13 @@ export default [
       {
         title: "宣教计划",
         link: "/education/plan",
-        key: "eating",
+        key: "plan",
         icon: ""
       },
       {
         title: "宣教内容",
-        link: "/education/content",
-        key: "eating",
+        link: "/education/contents",
+        key: "contents",
         icon: ""
       },
     ]
@@ -26,13 +26,13 @@ export default [
       {
         title: "设备列表",
         link: "/device/list",
-        key: "eating",
+        key: "list",
         icon: ""
       },
       {
         title: "定位位置",
         link: "/device/position",
-        key: "eating",
+        key: "position",
         icon: ""
       },
     ]

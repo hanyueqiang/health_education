@@ -2,11 +2,12 @@ import { PureComponent } from 'react';
 import { connect } from 'dva';
 import router from 'umi/router';
 import { Layout } from 'antd';
-import FooterView from './Footer';
+// import FooterView from './Footer';
 import MainMenu from './menus';
 import ContentHeader from './header';
 
 import styles from './index.less';
+const logo = require('@/assets/logobg.png');
 
 const { Header, Sider, Content } = Layout;
 
@@ -68,14 +69,16 @@ class Platform extends PureComponent {
 		return (
 			<Layout style={{ height: '100%' }}>
 				<Header className={styles.header}>
-					<div style={{ color: '#fff', paddingLeft: 20, fontSize: 18 }}>智慧病房 配置平台</div>
+					<div style={{ paddingLeft: 20 }}>
+						<img src={logo} alt="" height='44' width='310' style={{marginBottom: 5}}/>
+					</div>
 					<ContentHeader handleSetting={this.handleSetting} />
 				</Header>
-				<Layout>
-					<Sider width={200} style={{ background: '#fff' }}>
+				<Layout style={{ padding: 10 }}>
+					<Sider width={134} style={{ background: '#fff' }}>
 						<MainMenu location={location} defaultKey={defaultKey} />
 					</Sider>
-					<Layout style={{ padding: '24px 16px' }}>
+					<Layout style={{ paddingLeft: 10 }}>
 						{/* <Breadcrumb style={{ margin: '16px 0' }}>
 							<Breadcrumb.Item>Home</Breadcrumb.Item>
 							<Breadcrumb.Item>List</Breadcrumb.Item>
@@ -84,7 +87,7 @@ class Platform extends PureComponent {
 						<Content
 							className={styles.content}
 							style={{
-								padding: 24,
+								padding: '24px 20px',
 								background: '#fff',
 								minHeight: 280,
 								overflow: 'auto'
@@ -95,7 +98,7 @@ class Platform extends PureComponent {
 					</Layout>
 
 				</Layout>
-				<FooterView />
+				{/* <FooterView /> */}
 			</Layout>
 		);
 	}
