@@ -70,7 +70,7 @@ class Platform extends PureComponent {
 			<Layout style={{ height: '100%' }}>
 				<Header className={styles.header}>
 					<div style={{ paddingLeft: 20 }}>
-						<img src={logo} alt="" height='44' width='310' style={{marginBottom: 5}}/>
+						<img src={logo} alt="" height='40' width='280' style={{marginBottom: 5}}/>
 					</div>
 					<ContentHeader handleSetting={this.handleSetting} />
 				</Header>
