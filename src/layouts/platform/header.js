@@ -37,15 +37,15 @@ class Index extends PureComponent {
 			handleSetting(param);
 		};
 		const menu = (<Menu onClick={handleMenuClick}>
-			<Menu.Item key={"sys/user"} disabled>
+			{/* <Menu.Item key={"sys/user"} disabled>
 				<Icon type="user" />  {'个人中心'}
-			</Menu.Item>
+			</Menu.Item> */}
 			<Menu.Item key={"sys/settings"} disabled>
-				<Icon type="setting" />  {'设置中心'}
+				<Icon type="setting" />  {'设置密码'}
 			</Menu.Item>
 			<Menu.Divider />
 			<Menu.Item key="logout">
-				<Icon type="logout" />   {'退出'}
+				<Icon type="logout" />   {'退出登录'}
 			</Menu.Item>
 		</Menu>);
 		return (

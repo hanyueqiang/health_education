@@ -4,6 +4,8 @@ import { connect } from 'dva';
 import Login from './components/Login';
 import { message, Row, Col } from 'antd';
 import styles from './index.less';
+const loginImg = require('@/assets/loginpic.png');
+const logoTitle = require('@/assets/logotitle.png');
 
 @connect(
   ({ login }) => ({
@@ -35,13 +37,22 @@ class Index extends PureComponent {
     const { loading, isError } = this.props;
     return (
       <div className={styles.content}>
-        <Row>
-          <Col span={24} className={styles.logo}>
-            {/* <img alt="logo" src={logo} /> */}
-          </Col>
-        </Row>
-        <h2 className={styles.title}>智能健康宣教机器人</h2>
-        <Login onSubmit={this.handleSubmit} loading={loading} isError={isError} />
+        <div className={styles.login}>
+          <div>
+            <img src={loginImg} alt="" height='400' width='420' />
+          </div>
+          <div className={styles.loginRight}>
+            <div className={styles.loginContent}>
+              <Row>
+                <Col span={24} className={styles.logo}>
+                <img alt="logo" src={logoTitle} />
+              </Col>
+              </Row>
+              <Login onSubmit={this.handleSubmit} loading={loading} isError={isError} />
+            </div>
+          </div>
+
+        </div>
       </div>
     );
   }

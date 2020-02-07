@@ -1,7 +1,7 @@
 
 import { PureComponent } from 'react';
 import { connect } from 'dva';
-import { Form, Icon, Input, Button, Checkbox } from 'antd';
+import { Form, Icon, Input, Button } from 'antd';
 import styles from "./index.less";
 
 const FormItem = Form.Item;
@@ -69,13 +69,13 @@ class Login extends PureComponent {
 						)}
 					</FormItem>
 					<FormItem>
-						{fd('rememberMe', {
+						{/* {fd('rememberMe', {
 							valuePropName: 'checked',
 							initialValue: true,
 						})(
 							<Checkbox>记住密码</Checkbox>
 						)}
-						<a className={styles.login_form_forgot} href="/">{'忘记密码'}</a>
+						<a className={styles.login_form_forgot} href="/">{'忘记密码'}</a> */}
 						<Button type="primary" htmlType="submit" className={styles.login_form_button} loading={loading}>
 							{'登录'}
 						</Button>
