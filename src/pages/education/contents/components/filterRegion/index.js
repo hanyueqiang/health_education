@@ -16,14 +16,17 @@ class Index extends Component {
 	onDepartChange = (e) => {
 		console.log(e)
 	}
+
 	onWardChange = (e) => {
 		console.log(e)
 	}
+
 	onEduContentsChange = (e) => {
 		console.log(e)
 	}
-	addEduPlan = () => {
-		console.log('add plan')
+	
+	addEduContent = () => {
+		this.props.addEduContentHandle();
 	}
 
 	render() {
@@ -43,7 +46,7 @@ class Index extends Component {
 						onSelect={this.onWardChange}
 					/>
 				</div>
-				<Button icon="plus" type="primary" onClick={this.addEduPlan} className={styles.addPlan} >添加宣教内容</Button>
+				<Button icon="plus" type="primary" onClick={this.addEduContent} className={styles.addPlan} >添加宣教内容</Button>
 			</div>
 		)
 	}
