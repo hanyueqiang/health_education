@@ -1,79 +1,80 @@
 
 export const columns = context => ([
   {
-    title: '床号',
+    title: '序号',
     dataIndex: 'bedId',
     align: 'left',
     ellipsis: true,
     render: text => text || '-'
   },
   {
-    title: '姓名',
+    title: '床号',
     align: 'left',
     dataIndex: 'name',
     ellipsis: true,
     render: text => text || '-'
   },
   {
-    title: '性别',
+    title: '姓名',
     align: 'left',
     ellipsis: true,
     dataIndex: 'sex',
     render: text => text || '-'
   },
   {
-    title: '科室',
+    title: '性别',
     align: 'left',
     ellipsis: true,
     dataIndex: 'depart',
     render: text => text || '-'
   },
   {
-    title: '病区',
+    title: '年龄',
     align: 'left',
     ellipsis: true,
     dataIndex: 'quart',
     render: text => text || '-'
   },
   {
-    title: '宣教内容',
+    title: '科室',
     align: 'left',
     ellipsis: true,
     dataIndex: 'content',
     render: text => text || '-'
   },
   {
-    title: '计划时间',
+    title: '病区',
     align: 'left',
     ellipsis: true,
     dataIndex: 'plantime',
     render: text => text || '-'
   },
   {
-    title: '执行状态',
+    title: '入院时间',
     align: 'left',
     ellipsis: true,
     dataIndex: 'status',
     render: text => text || '-'
   },
   {
-    title: '执行时间',
+    title: '主治医生',
     align: 'left',
     ellipsis: true,
     dataIndex: 'time',
     render: text => text || '-'
   },
   {
-    title: '操作',
-    align: 'center',
-    dataIndex: 'options',
-    width: 120,
-    render: (text, record) => (
-      <div>
-        <span className="span-highlight" onClick={context.stopHandle.bind(context, record)}>停止</span>
-        <span className="span-highlight" onClick={context.editHandle.bind(context, record)} style={{marginLeft: 10}}>编辑</span>
-        <span className="span-highlight" onClick={context.delHandle.bind(context, record)} style={{marginLeft: 10}}>删除</span>
-      </div>
-    )
+    title: '责任护士',
+    align: 'left',
+    ellipsis: true,
+    dataIndex: 'time2',
+    render: text => text || '-'
   },
+  {
+    title: '参考时长',
+    align: 'left',
+    ellipsis: true,
+    dataIndex: 'time3',
+    render: text => text || '-'
+  }
 ]);

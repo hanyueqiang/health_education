@@ -6,6 +6,16 @@ export default {
 	namespace: 'eduPlan',
 	state: {
 		rowKey: 'bedId',
+		selectDataSource: [
+			{
+				bedId: 1,
+				name: '张三',
+				sex: '男',
+				depart: '呼吸内科',
+				quart: '三区',
+				content: '大丰收'
+			}
+		],
 		dataSource: [
 			{
 				bedId: 1,

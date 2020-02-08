@@ -5,3 +5,11 @@ html, body, #root {
 body {
   margin: 0;
 }
+
+.span-highlight {
+  color: #1890ff;
+  cursor: pointer;
+}
+.span-highlight:hover {
+  color: #40a9ff;
+}

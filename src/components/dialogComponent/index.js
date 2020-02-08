@@ -12,10 +12,12 @@ export default class Index extends PureComponent {
       onCancel = () => {},
       width = 400,
       footer,
-      maskClosable = false
+      maskClosable = false,
+      style = {}
     } = this.props;
     return (
       <Modal
+        style={style}
         destroyOnClose={true}
         maskClosable={maskClosable}
         title={title}
