@@ -23,8 +23,9 @@ class Index extends Component {
 	onEduContentsChange = (e) => {
 		console.log(e)
 	}
-	addEduPlan = () => {
-		console.log('add plan')
+	
+	addDevice = () => {
+		this.props.addDeviceHandle();
 	}
 
 	render() {
@@ -44,7 +45,7 @@ class Index extends Component {
 						onSelect={this.onWardChange}
 					/>
 				</div>
-				<Button icon="plus" type="primary" onClick={this.addEduPlan} className={styles.addPlan} >添加设备</Button>
+				<Button icon="plus" type="primary" onClick={this.addDevice} className={styles.addPlan} >添加设备</Button>
 			</div>
 		)
 	}
