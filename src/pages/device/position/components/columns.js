@@ -42,8 +42,8 @@ export const columns = context => ([
     width: 120,
     render: (text, record) => (
       <div>
-        <span className="smart-highlight" onClick={context.editHandle.bind(context, record)} style={{marginLeft: 10}}>编辑</span>
-        <span className="smart-highlight" onClick={context.delHandle.bind(context, record)} style={{marginLeft: 10}}>删除</span>
+        <span className="span-highlight" onClick={context.editHandle.bind(context, record)} style={{marginLeft: 10}}>编辑</span>
+        <span className="span-highlight" onClick={context.delHandle.bind(context, record)} style={{marginLeft: 10}}>删除</span>
       </div>
     )
   },
