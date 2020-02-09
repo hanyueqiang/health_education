@@ -6,6 +6,7 @@ import SelectWard from '@components/selectWard';
 import InputComponent from '@components/inputComponent';
 import TableContainer from '@components/tableContainer';
 import { columns } from './columns';
+import BroadcastForm from './broadcastForm';
 import { Checkbox } from 'antd';
 import styles from './index.less';
 
@@ -29,7 +30,8 @@ class Index extends Component {
 		planTime: null,
 		timeBreakVal: 1,
 		selectedRowKeys: [],
-		eduNameVal: ''
+		eduNameVal: '',
+		visible: false
 	}
 
 	componentDidMount() {
@@ -60,7 +62,35 @@ class Index extends Component {
 	onSelectChange = selectedRowKeys => {
 		console.log('selectedRowKeys changed: ', selectedRowKeys);
 		this.setState({ selectedRowKeys });
-	};
+	}
+
+	editBroadcastHandle = (record) => {
+		console.log(record);
+		this.setState({ 
+			visible: true
+		});
+	}
+
+	saveFormRef = formRef => {
+    this.formRef = formRef;
+	}
+
+	handleCancel = () => {
+    this.setState({ visible: false });
+	}
+
+	handleOk = () => {
+    const { form } = this.formRef.props;
+    form.validateFields((err, values) => {
+      if (err) {
+        return;
+      }
+      console.log('Received values of form: ', values);
+      form.resetFields();
+      this.setState({ visible: false });
+    });
+  };
+	
 
 	render() {
 		const { departSource, wardSource, loading, rowKey } = this.props;
@@ -105,7 +135,12 @@ class Index extends Component {
 						/>
 						<span className={styles.remarks}>注：参考时长根据宣教内容字数、患者床号位置、机器人移动速度计算得出供参考</span>
 					</div>
-
+					<BroadcastForm
+						wrappedComponentRef={this.saveFormRef}
+						visible={this.state.visible}
+						onCancel={this.handleCancel}
+						onOk={this.handleOk}
+					/>
 				</div>
 			</div>
 		)
