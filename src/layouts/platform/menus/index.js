@@ -53,7 +53,7 @@ class MainMenu extends PureComponent {
     return (
       <Menu
         selectedKeys={[key || defaultKey]}
-        defaultOpenKeys={['knowledge']}
+        defaultOpenKeys={['education']}
         mode={mode}
         theme={menuTheme}
         className="progressbar"
